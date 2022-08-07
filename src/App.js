@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Backcard from './Components/backcard';
 import Form from './Components/Form';
+import FrontCard from './Components/FrontCard';
+
 function App() {
-  const [name, setName] = useState('');
-  const cardNameOnchange = e => setName(e.target.value);
-  const onSubmit = data => console.log(data);
+
   return (
 
     <div>
       <Backcard/>
-      <Form  onSubmit={onSubmit} cardNameOnChange={cardNameOnchange}/>
+      <FrontCard/>
+      <Form  />
+
+
     </div>
   );
 }
