@@ -19,6 +19,12 @@ left: 10px;
   height: 50%;
 }
 
+.name {
+
+  color: white;
+  margin-left: 50px;
+}
+
 .four {
   color: white;
   margin: 10px;

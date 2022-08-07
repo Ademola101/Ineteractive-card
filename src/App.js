@@ -4,7 +4,7 @@ import FrontCard from './Components/FrontCard';
 import { useForm } from 'react-hook-form';
 // import Form from './Components/Form';
 function App() {
-  const [setName] = useState('');
+  const [name, setName] = useState('');
   const [number, setNumber] = useState('00000000000000000');
 
   const onSubmit = data => console.log(data);
@@ -16,25 +16,28 @@ function App() {
 
     <div>
       <Backcard/>
-      <FrontCard Number={number}/>
+      <FrontCard Number={number} Name = {name}/>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div><label htmlFor="name">
         card Name
         </label>
         <input placeholder='e.g. Ademola Ogunmokun'
-          name='name'  type= 'text' onChange={cardNameOnChange} {...register('name', { required: true, minLength: 4 })}/>
-        {errors.name && <p>This field is required with minimum of 4 wordd</p>}
+          name='name'  type= 'text'  {...register('name', {
+            required: true,
+            minLength: 4,
+            onChange : cardNameOnChange })}/>
+        {errors.name && <p>This field is required with minimum of 4 word</p>}
         </div>
         <div><label htmlFor="number">
         card number
         </label>
         <input placeholder='e.g. 123456789012'
-          name='number'  type= 'number'  {...register('number', { required: true, max: 16, min: 16,
+          name='number' maxLength={16}  type= 'number'  {...register('number', { required: true, max: 16, min: 16,
             onChange : cardNumberOnChange } )}/>
         {errors.name && <p>This field is required with 16 digits</p>}
         </div>
 
-        <input type = 'text' onChange = { () => console.log(number)}/>
+
         <button type='submit'> submit</button>
       </form>
     </div>
