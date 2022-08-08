@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Backcard from './Components/Backcard';
+import Backcard from './Components/backcard';
 import FrontCard from './Components/FrontCard';
 import { useForm, } from 'react-hook-form';
 import Form from './Components/Form';
