@@ -18,6 +18,7 @@ left: 10px;
   justify-content: center;
   align-items: center;
   height: 50%;
+  letter-spacing: 2px;
 }
 
 .flex {
@@ -36,6 +37,7 @@ left: 10px;
 
 .month {
   color: white;
+  letter-spacing: 2px;
 }
 .name {
 
@@ -46,6 +48,7 @@ left: 10px;
 
 .four {
   color: white;
-  margin: 10px;
+  margin: 5px;
+  letter-spacing: 2px;
 }
 `;

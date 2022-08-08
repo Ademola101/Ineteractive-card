@@ -14,12 +14,12 @@ const FrontCard = ({ Number, Name, month, year }) => {
         <span  className='four'> {Number.substring(8,12)}</span><span  className='four'> {Number.substring(12,16)}</span></div>
       <div className='flex'>
         <small className='name'>
-          {Name}
+          {Name }
         </small>
 
         <small className='month'>
 
-          {month} / {year}
+          {month ==='' ? '00' : month} / {year === '' ? '00': year}
         </small>
 
       </div>
