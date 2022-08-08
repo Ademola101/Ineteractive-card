@@ -1,40 +1,7 @@
-// import React from 'react';
-// // import { useForm } from 'react-hook-form';
-
-// const Form = ({  cardNameOnChange, onSubmit }) => {
-
-//   console.log(watch('name'));
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       <div><label htmlFor="name">
-//         card Name
-//       </label>
-//       <input placeholder='e.g. Ademola Ogunmokun'
-//         name='name'  type= 'text' onChange={cardNameOnChange} {...register('name', { required: true, minLength: 4 })}/>
-//       {errors.name && <p>This field is required with minimum of 4 wordd</p>}
-//       </div>
-//       <button type='submit'> submit</button>
-//     </form>
-//   );
-// };
-
-// export default Form;
-
-
-
-// const Form = () => {
-//   return (
-//     <div>
-//       hello
-//     </div>
-//   );
-// };
-
-// export default Form;
 
 import React from 'react';
 
-const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange, cardNumberOnChange }) => {
+const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange, cardNumberOnChange, cvvOnchange }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div><label htmlFor="name">
@@ -64,13 +31,27 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange, cardN
         card number
       </label>
       <input placeholder='e.g. 123456789012'
-        name='number' maxLength={16}  type= 'number'  {...register('number', { required: true, max: 16, min: 16,
+        name='number'   type= 'number'  {...register('number', { required: true, max: 16, min: 16,maxLength:16,
           onChange : cardNumberOnChange } )}/>
       {errors.name && <p>This field is required with 16 digits</p>}
       </div>
 
       <div>
 
+        <span> <label htmlFor="month">EXP. DATE &#123;MM/YY&#125;</label> </span> <span> <label htmlFor="cvc">CVC</label></span>
+
+        <div>
+          <input type="number"
+            required placeholder='MM' name='month' {...register('month', { required: true, max: 2, maxLength:2 })}  />
+          <input type="number"
+            required placeholder='YY' name='year' {...register('year', { required: true, max: 2, maxLength:2 })}  />
+          <input type="number"
+            required placeholder='e.g 123' name='cvc' {...register('cvc', {
+              required: true, max: 2, maxLength:2, onChange : cvvOnchange  })}
+          />
+
+
+        </div>
 
       </div>
 
