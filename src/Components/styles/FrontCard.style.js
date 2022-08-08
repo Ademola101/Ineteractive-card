@@ -43,7 +43,7 @@ left: 10px;
 
   color: white;
   margin-left: 10px;
-  width: 75%;
+  width: 70%;
 }
 
 .four {
