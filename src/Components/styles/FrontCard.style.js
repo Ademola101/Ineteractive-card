@@ -4,6 +4,7 @@ export const FrontCardStyle = styled.div`
 /* background-color: hsl(249, 99%, 64%);
 background-image: linear-gradient( to left, hsl(249, 99%, 64%), hsl(249, 99%, 64%) 65%, hsl(278, 68%, 11%)); */
 background: url('/bg-card-front.png');
+background-repeat: no-repeat;
 height: 200px;
 
 width: 80%;
@@ -51,4 +52,13 @@ left: 10px;
   margin: 5px;
   letter-spacing: 2px;
 }
+
+  @media (min-width:768px) {
+position: relative;
+bottom: 500px;
+width: 35%;
+margin-left: 50px;
+
+
+  }
 `;

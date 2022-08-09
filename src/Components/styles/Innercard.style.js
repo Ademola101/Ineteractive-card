@@ -6,6 +6,7 @@ height: 200px;
 width: 80%;
 background-color: hsl(0, 0%, 100%);
 
+
 position: relative;
 top: 25px;
 left: 60px;
@@ -34,5 +35,10 @@ border-radius: 10px;
   margin: 5%;
   text-align: end;
 
+}
+
+@media (min-width:768px) {
+  position: relative;
+  top: 300px;
 }
 `;

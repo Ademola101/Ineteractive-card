@@ -8,9 +8,6 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
   // );
 
 
-
-  console.log(errors.name);
-
   return (
     <FormStyle   onSubmit={handleSubmit(onSubmit)}>
       <div><label htmlFor="name" className='namelabel'>
@@ -69,13 +66,13 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
 
         <div>
           <input type="number" className='monthinput'
-            placeholder='MM' name='month' {...register('month', { required: true, max: 2, maxLength:2,
+            placeholder='MM' name='month' {...register('month', { required: true,
               onChange: monthOnchange })}  />
           <input type="number"
-            placeholder='YY' className='yearinput' name='year' {...register('year', { required: true, max: 2, maxLength:2, onChange: yearOnChange })}  />
+            placeholder='YY' className='yearinput' name='year' {...register('year', { required: true, onChange: yearOnChange })}  />
           <input type="number" className='cvvinput'
             placeholder='e.g 123' name='cvc' {...register('cvc', {
-              required: true, max: 2, maxLength:2, onChange : cvvOnchange  })}
+              required: true,  onChange : cvvOnchange  })}
           />
 
 

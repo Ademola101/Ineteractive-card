@@ -26,6 +26,7 @@ input::placeholder {
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 .numberinput {
   width: 80vw;
@@ -34,6 +35,7 @@ input::placeholder {
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 .namelabel {
@@ -57,6 +59,7 @@ input::placeholder {
   margin-top: 10px;
   border:  solid ${(props) => props.error === true ? 'red' : 'hsl(240deg 7% 62%)'};
   border-radius: 5px;
+  
 }
 .yearinput {
   width: 80px;
