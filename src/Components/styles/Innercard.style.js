@@ -39,6 +39,9 @@ border-radius: 10px;
 
 @media (min-width:768px) {
   position: relative;
-  top: 300px;
+  top: 350px;
+  left: 200px;
+  background-color: hsl(240deg 36% 86%);
+  width: 100%;
 }
 `;

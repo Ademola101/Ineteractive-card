@@ -38,11 +38,22 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
       <input className='nameinput' style={{ ...borderStyle, border: errors.name && 'solid red' }}
         placeholder='e.g. Ademola Ogunmokun'
         name='name'  type= 'text'  {...register('name', {
-          required: true,
+          required: 'required',
+          pattern: {
+            value: /\w+\s\w+/,
+            message: 'First name and last name required'
+          },
+          // minLength: {
+          //   value: 2, message: 'error message'
+
+          // },
           onChange : cardNameOnChange,
 
           message: 'First name and last name required seperated by space' })}/>
-      {errors.name && errors.name.type ==='required' && <div className='error'>This field is required with first name and last name</div>}
+      {errors.name && errors.name.type ==='required' && <div className='error'>
+        {errors.name.message}</div>}
+      {errors.name && errors.name.type ==='pattern' && <div className='error'>
+        {errors.name.message}</div>}
       {/* {errors.name && <div className='error'>{errors.name.message}</div>} */}
       </div>
       <div><label className='numberlabel' htmlFor="number">
@@ -54,9 +65,15 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
       </label>
       <input placeholder='e.g. 123456789012' className='numberinput' style={{ ...borderStyle,
         border: errors.number && 'solid red' }}
-      name='number'   type= 'number'  {...register('number', { required: true,
+      name='number'   type= 'number'  {...register('number', { required: 'This field is required',
+        minLength: {
+          value: 16,
+          message: 'Card number should be 16 digits'
+
+        },
         onChange : cardNumberOnChange } )}/>
-      {errors.number && <div className='error'>This field is required with 16 digits</div>}
+      {errors.number &&  errors.number.type === 'required' && <div className='error'>{errors.number.message}</div>}
+      {errors.number &&  errors.number.type === 'minLength' && <div className='error'>{errors.number.message}</div>}
       </div>
 
       <div>
