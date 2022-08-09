@@ -6,7 +6,9 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
   // const [error] = useState(
   //   errors.name ? true : false
   // );
-
+  const nameStyle = {
+    boder :'solid hsl(240deg 7% 62%)'
+  };
 
   return (
     <FormStyle   onSubmit={handleSubmit(onSubmit)}>
@@ -30,10 +32,11 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
             );
           }}/> */}
 
-      <input className='nameinput' placeholder='e.g. Ademola Ogunmokun'
+      <input className='nameinput' style={{ ...nameStyle, border: errors.name && 'solid red' }} placeholder='e.g. Ademola Ogunmokun'
         name='name'  type= 'text'  {...register('name', {
           required: true,
           minLength: 4,
+
           onChange : cardNameOnChange })}/>
       {errors.name && <div className='error'>This field is required with first name and last name</div>}
       </div>

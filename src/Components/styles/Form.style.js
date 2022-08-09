@@ -13,16 +13,23 @@ input::placeholder {
 
     color: hsl(240deg 22% 84%);
     font-size: 1.2rem;
-  
     
     padding: 10px;
+
     
 }
 
+
+input:focus {
+  border: solid #6767ab 2px;
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+}
 .nameinput {
   width: 80vw;
   height: 40px;
-  border:  solid ${(props) => props.error === true ? 'red' : 'hsl(240deg 7% 62%)'};
+  border:  solid hsl(240deg 7% 62%) 2px;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -31,7 +38,7 @@ input::placeholder {
 .numberinput {
   width: 80vw;
   height: 40px;
-  border:  hsl(240deg 7% 62%) solid;
+  border:  hsl(240deg 7% 62%) solid 2px;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -57,7 +64,7 @@ input::placeholder {
   width: 80px;
   padding: 10px;
   margin-top: 10px;
-  border:  solid ${(props) => props.error === true ? 'red' : 'hsl(240deg 7% 62%)'};
+  border:  solid hsl(240deg 7% 62%);
   border-radius: 5px;
   
 }
@@ -66,13 +73,13 @@ input::placeholder {
   padding: 10px;
   margin-top: 10px;
   margin-left: 10px;
-  border:  hsl(240deg 7% 62%) solid;
+  border:  hsl(240deg 7% 62%) solid 2px;
   border-radius: 5px;
 }
 
 .cvvinput {
   margin-left: 10px;
-  border:  hsl(240deg 7% 62%) solid;
+  border:  hsl(240deg 7% 62%) solid 2px;
   border-radius: 5px;
   padding: 10px;
   width: 135px;
