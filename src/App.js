@@ -6,7 +6,6 @@ import Form from './Components/Form';
 import Submit from './Components/Submit';
 
 
-
 function App() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('00000000000000000');

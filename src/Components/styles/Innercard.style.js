@@ -22,7 +22,7 @@ border-radius: 10px;
 
 
 .cvv {
-  background-color:hsl(270, 3%, 87%);
+  background-color:hsl(270deg 4% 61%);
   height: 30px;
   position: relative;
   top: 54px;
@@ -34,6 +34,7 @@ border-radius: 10px;
 .cvvnumber {
   margin: 5%;
   text-align: end;
+  color: hsl(240deg 6% 87%);
 
 }
 
@@ -42,6 +43,6 @@ border-radius: 10px;
   top: 350px;
   left: 200px;
   background-color: hsl(240deg 36% 86%);
-  width: 100%;
+  width: 300px;
 }
 `;

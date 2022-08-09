@@ -58,6 +58,7 @@ position: relative;
 bottom: 500px;
 width: 35%;
 margin-left: 50px;
+width: 350px;
 
 
   }

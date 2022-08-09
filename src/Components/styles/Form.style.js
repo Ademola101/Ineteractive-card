@@ -89,7 +89,7 @@ input:focus {
 }
 
 .cvvlabel {
-margin-left: 10px;
+margin-left: 60px;
 font-size: small;
 
 }
@@ -133,5 +133,27 @@ button {
   margin-top: 30px;
   font-size: large;
 
+ 
+
+}
+
+@media (min-width:768px) {
+
+position: relative;
+bottom: 700px;
+left: 550px;
+
+.cvvinput {
+  width: 120px;
+}
+
+button {
+  width: 300px
+}
+.nameinput, .numberinput {
+
+  width: 300px!important;
+  display: block;
+}
 }
 `;
