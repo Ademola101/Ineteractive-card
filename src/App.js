@@ -17,12 +17,11 @@ function App() {
   // const onSubmit = () => setSubmit(true);
   const onSubmit = (data) => { console.log(data); setSubmit(true); };
   const { register, handleSubmit, watch, formState: { errors }, } = useForm();
-  const cardNameOnChange = () => setName(watch('name'));
+  const cardNameOnChange = () => setName(watch('name').toUpperCase());
   const cardNumberOnChange = () =>  setNumber(watch('number'));
   const cvvOnchange = () => setCvv(watch('cvc'));
   const monthOnchange = () => setMonth(watch('month'));
   const yearOnChange = () => setYear(watch('year'));
-  console.log(submit);
   return (
 
     <div>

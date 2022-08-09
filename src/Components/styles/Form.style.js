@@ -48,15 +48,18 @@ input:focus {
 .namelabel {
   margin-top: 10px;
   letter-spacing: 1px;
+  font-size: small;
 }
 .numberlabel {
   margin-top: 10px;
   letter-spacing: 1px;
+  font-size: small;
   
 }
 
 .monthlabel {
   letter-spacing: 1px;
+  font-size: small;
   
 }
 
@@ -87,12 +90,36 @@ input:focus {
 
 .cvvlabel {
 margin-left: 10px;
+font-size: small;
 
 }
 
 .error {
   color: red;
   margin-bottom: 20px;
+}
+.error-month {
+  color: red;
+  margin-bottom: 20px;
+  width: 80px;
+}
+.error-year {
+  color: red;
+  margin-bottom: 20px;
+  width: 80px;
+  position: relative;
+  left: 90px;
+  bottom: 65px;
+
+}
+.error-cvv {
+  color: red;
+  margin-bottom: 20px;
+  width: 120px;
+  position: relative;
+  left: 200px;
+  bottom: 130px;
+
 }
 
 button {
