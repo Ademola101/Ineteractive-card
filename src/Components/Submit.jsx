@@ -20,7 +20,7 @@ export default function Submit({ onContinueSubmit }) {
       </p>
 
       <div className='added'>
-          We have added you card details
+          We have added your card details
       </div>
 
       <button  onClick={onContinueSubmit}> Continue </button>
