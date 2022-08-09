@@ -16,19 +16,20 @@ function App() {
   const [submit, setSubmit] = useState(false);
   // const onSubmit = () => setSubmit(true);
   const onSubmit = (data) => { console.log(data); setSubmit(true); };
-  const { register, handleSubmit, watch, formState: { errors }, } = useForm();
+  const { register, reset, handleSubmit, watch, formState: { errors }, } = useForm();
   const cardNameOnChange = () => setName(watch('name').toUpperCase());
   const cardNumberOnChange = () =>  setNumber(watch('number'));
   const cvvOnchange = () => setCvv(watch('cvc'));
   const monthOnchange = () => setMonth(watch('month'));
   const yearOnChange = () => setYear(watch('year'));
+  const onContinueSubmit = () => {setSubmit(false); reset();};
   return (
 
     <div>
       <Backcard cvv={cvv}/>
       <FrontCard Number={number} Name = {name} month = {month} year = {year}/>
 
-      {submit ? (<Submit />) : (<Form onSubmit={onSubmit} register = {register} errors = {errors} handleSubmit = {handleSubmit}
+      {submit ? (<Submit onContinueSubmit={onContinueSubmit} />) : (<Form onSubmit={onSubmit} register = {register} errors = {errors} handleSubmit = {handleSubmit}
         cardNameOnChange = {cardNameOnChange} cardNumberOnChange = {cardNumberOnChange} cvvOnchange = {cvvOnchange}
         monthOnchange = {monthOnchange} yearOnChange = {yearOnChange}/>
       )}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { SubmitStyle } from './styles/Submit.style';
 
-export default function Submit() {
+export default function Submit({ onContinueSubmit }) {
+
   return (
     <SubmitStyle>
       <div className='logo'>
@@ -11,15 +12,18 @@ export default function Submit() {
           gradientUnits="userSpaceOnUse"><stop stopColor="#6348FE"/><stop offset="1" stopColor="#610595"/>
         </linearGradient></defs></svg>
       </div>
-      <p>
+      <p >
+        <strong className='thank'>
+        THANK YOU
+        </strong>
 
-          THANK YOU
       </p>
 
-      <div>
+      <div className='added'>
           We have added you card details
       </div>
 
+      <button  onClick={onContinueSubmit}> Continue </button>
     </SubmitStyle>
   );
 }
