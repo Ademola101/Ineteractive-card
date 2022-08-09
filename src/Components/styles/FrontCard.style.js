@@ -13,6 +13,15 @@ position: relative;
 bottom: 120px;
 left: 10px;
 
+.tiny {
+  height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
 .number {
 
   margin-top: 30px;
