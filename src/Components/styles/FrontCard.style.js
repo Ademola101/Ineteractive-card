@@ -49,6 +49,8 @@ left: 10px;
 .month {
   color: white;
   letter-spacing: 2px;
+  position: relative;
+  top: -20px;
 }
 .name {
 
@@ -69,6 +71,10 @@ bottom: 550px;
 width: 35%;
 margin-left: 50px;
 width: 350px;
+.month {
+  position: relative;
+  top: -20px;
+}
 
 
   }
