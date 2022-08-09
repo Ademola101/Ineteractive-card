@@ -10,7 +10,7 @@ border-radius: 10px;
 
 width: 80%;
 position: relative;
-bottom: 120px;
+bottom: 171px;
 left: 10px;
 
 .tiny {
@@ -57,6 +57,9 @@ left: 10px;
   color: white;
   margin-left: 10px;
   width: 70%;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 20px;
 }
 
 .four {
@@ -67,7 +70,7 @@ left: 10px;
 
   @media (min-width:768px) {
 position: relative;
-bottom: 550px;
+bottom: 500px;
 width: 35%;
 margin-left: 50px;
 width: 350px;
