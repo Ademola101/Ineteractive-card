@@ -20,7 +20,14 @@ function App() {
   const cvvOnchange = () => setCvv(watch('cvc'));
   const monthOnchange = () => setMonth(watch('month'));
   const yearOnChange = () => setYear(watch('year'));
-  const onContinueSubmit = () => {setSubmit(false); reset();};
+  const onContinueSubmit = () => {setSubmit(false);
+    reset();
+    setName('');
+    setNumber('00000000000000000');
+    setCvv('000');
+    setMonth('00');
+    setYear('00');
+  };
   return (
 
     <div>

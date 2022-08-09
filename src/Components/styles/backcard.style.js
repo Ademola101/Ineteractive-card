@@ -9,8 +9,8 @@ background-image: linear-gradient(to top right,
 
    @media (min-width:768px) {
   height: 100vh;
-  width: 30vw;
+  width: 350px;
 }
 
-
+margin-bottom: 50px;
 `;

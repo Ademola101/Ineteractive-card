@@ -39,5 +39,15 @@ margin-top: 30px;
 font-size: large;
 
 }
+
+@media (min-width:768px) {
+
+  bottom: 600px;
+  left: 200px;
+
+  button {
+    width: 300px;
+  }
+}
 `;
 
