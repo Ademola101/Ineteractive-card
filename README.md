@@ -15,6 +15,11 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover, active, and focus states for interactive elements on the page
 
+### Screenshot
+
+
+![Mobile view](./screenshot/screenshot_web.png)
+
 ## My process
 
 ### Links

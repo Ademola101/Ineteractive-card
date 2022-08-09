@@ -6,6 +6,7 @@ background-image: linear-gradient( to left, hsl(249, 99%, 64%), hsl(249, 99%, 64
 background: url('/bg-card-front.png');
 background-repeat: no-repeat;
 height: 200px;
+border-radius: 10px;
 
 width: 80%;
 position: relative;
