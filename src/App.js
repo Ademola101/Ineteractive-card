@@ -14,7 +14,6 @@ function App() {
   const [month, setMonth] = useState('00');
   const [year, setYear] = useState('00');
   const [submit, setSubmit] = useState(false);
-  // const onSubmit = () => setSubmit(true);
   const onSubmit = (data) => { console.log(data); setSubmit(true); };
   const { register, reset, handleSubmit, watch, formState: { errors }, } = useForm();
   const cardNameOnChange = () => setName(watch('name').toUpperCase());
