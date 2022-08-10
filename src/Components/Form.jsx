@@ -35,7 +35,7 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
             );
           }}/> */}
 
-      <input className='nameinput' style={{ ...borderStyle, border: errors.name && 'solid red' }}
+      <input className='nameinput' id='name' style={{ ...borderStyle, border: errors.name && 'solid red' }}
         placeholder='e.g. Ademola Ogunmokun'
         name='name'  type= 'text'  {...register('name', {
           required: 'required',
@@ -63,7 +63,7 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
         </strong>
 
       </label>
-      <input placeholder='e.g. 123456789012' className='numberinput' style={{ ...borderStyle,
+      <input id='number' placeholder='e.g. 123456789012' className='numberinput' style={{ ...borderStyle,
         border: errors.number && 'solid red' }}
       name='number'   type= 'number'  {...register('number', { required: 'This field is required',
         minLength: {
@@ -91,13 +91,13 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
         </label></span>
 
         <div >
-          <input type="number" className='monthinput'style={{ ...borderStyle, border: errors.month && 'solid red' }}
+          <input type="number" id='month' className='monthinput'style={{ ...borderStyle, border: errors.month && 'solid red' }}
             placeholder='MM' name='month' {...register('month', { required: true,
               onChange: monthOnchange, })}  />
 
-          <input type="number" style={{ ...borderStyle, border: errors.year && 'solid red' }}
+          <input type="number" id='year' style={{ ...borderStyle, border: errors.year && 'solid red' }}
             placeholder='YY' className='yearinput' name='year' {...register('year', { required: true, onChange: yearOnChange })}  />
-          <input type="number" className='cvvinput' style={{ ...borderStyle, border: errors.cvc && 'solid red' }}
+          <input type="number" id='cvc' className='cvvinput' style={{ ...borderStyle, border: errors.cvc && 'solid red' }}
             placeholder='e.g 123' name='cvc' {...register('cvc', {
               required: true,  onChange : cvvOnchange  })}
           />
