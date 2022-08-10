@@ -3,11 +3,7 @@ import React from 'react';
 import { FormStyle } from './styles/Form.style';
 const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
   cardNumberOnChange, cvvOnchange, monthOnchange, yearOnChange }) => {
-  // const [error] = useState(
-  //   errors.name ? true : false
-  // );
 
-  console.log(errors.name);
   const borderStyle = {
     boder :'solid hsl(240deg 7% 62%)'
   };
@@ -35,10 +31,10 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
             );
           }}/> */}
 
-      <input className='nameinput' id='name' style={{ ...borderStyle, border: errors.name && 'solid red' }}
+      <input className='nameinput' id='name' style={{ ...borderStyle, border: errors.name && 'solid red 2px' }}
         placeholder='e.g. Ademola Ogunmokun'
         name='name'  type= 'text'  {...register('name', {
-          required: 'required',
+          required: 'Cant\'t be blank',
           pattern: {
             value: /\w+\s\w+/,
             message: 'First name and last name required'
@@ -64,8 +60,8 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
 
       </label>
       <input id='number' placeholder='e.g. 123456789012' className='numberinput' style={{ ...borderStyle,
-        border: errors.number && 'solid red' }}
-      name='number'   type= 'number'  {...register('number', { required: 'This field is required',
+        border: errors.number && 'solid red 2px' }}
+      name='number'   type= 'number'  {...register('number', { required: 'Cant\'t be blank',
         minLength: {
           value: 16,
           message: 'Card number should be 16 digits'
@@ -91,20 +87,20 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
         </label></span>
 
         <div >
-          <input type="number" id='month' className='monthinput'style={{ ...borderStyle, border: errors.month && 'solid red' }}
+          <input type="number" id='month' className='monthinput'style={{ ...borderStyle, border: errors.month && 'solid red 2px' }}
             placeholder='MM' name='month' {...register('month', { required: true,
               onChange: monthOnchange, })}  />
 
-          <input type="number" id='year' style={{ ...borderStyle, border: errors.year && 'solid red' }}
+          <input type="number" id='year' style={{ ...borderStyle, border: errors.year && 'solid red 2px' }}
             placeholder='YY' className='yearinput' name='year' {...register('year', { required: true, onChange: yearOnChange })}  />
-          <input type="number" id='cvc' className='cvvinput' style={{ ...borderStyle, border: errors.cvc && 'solid red' }}
+          <input type="number" id='cvc' className='cvvinput' style={{ ...borderStyle, border: errors.cvc && 'solid red 2px' }}
             placeholder='e.g 123' name='cvc' {...register('cvc', {
               required: true,  onChange : cvvOnchange  })}
           />
 
-          {errors.month && <div className='error-month'> month is required </div>}
-          {errors.year && <div className='error-year'> year is required </div>}
-          {errors.cvc && <div className='error-cvv'> cvc is required </div>}
+          {errors.month && <div className='error-month' > can&apos;`t be blank  </div>}
+          {errors.year && <div className='error-year' >  can&apos;`t be blank</div>}
+          {errors.cvc && <div className='error-cvv' > can&apos;`t be blank </div>}
         </div>
 
       </div>
