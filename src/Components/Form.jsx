@@ -4,6 +4,11 @@ import { FormStyle } from './styles/Form.style';
 const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
   cardNumberOnChange, cvvOnchange, monthOnchange, yearOnChange }) => {
 
+  Boolean(errors.name);
+  console.log('month error',Boolean(errors.month));
+  console.log('name year',Boolean(errors.year));
+  console.log('name cvc',Boolean(errors.cvc));
+
   const borderStyle = {
     boder :'solid hsl(240deg 7% 62%)'
   };
@@ -34,7 +39,7 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
       <input className='nameinput' id='name' style={{ ...borderStyle, border: errors.name && 'solid red 2px' }}
         placeholder='e.g. Ademola Ogunmokun'
         name='name'  type= 'text'  {...register('name', {
-          required: 'Cant\'t be blank',
+          required: 'Cant\t be blank',
           pattern: {
             value: /\w+\s\w+/,
             message: 'First name and last name required'
@@ -111,10 +116,13 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
 
           {errors.month && <div className='error-month' > can&apos;t be blank  </div>}
           {errors.year && <div className='error-year' style={{
-            bottom: !errors.month && errors.year ? 0 : 60
+            bottom: !errors.month && errors.year ? 0 : 55
           }}>  can&apos;t be blank</div>}
           {errors.cvc && <div className='error-cvv' style={{
-            bottom: (!errors.month || !errors.year) && errors.cvv  ? 0 : 60
+            bottom: (!errors.month || !errors.year) && errors.cvv  ? 60
+              : errors.month && !errors.year && errors.cvc ? 55
+                : !errors .month && errors.year && errors.cvc ? 50 :
+                  !errors.month && !errors.year ? 1 : 106
           }} > can&apos;t be blank </div>}
         </div>
 

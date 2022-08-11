@@ -97,11 +97,13 @@ font-size: small;
 .error {
   color: red;
   margin-bottom: 20px;
+  font-size: small;
 }
 .error-month {
   color: red;
   margin-bottom: 20px;
   width: 80px;
+  font-size: small;
 }
 .error-year {
   color: red;
@@ -110,6 +112,7 @@ font-size: small;
   position: relative;
   left: 90px;
   bottom: 65px;
+  font-size: small;
 
 }
 .error-cvv {
@@ -119,6 +122,7 @@ font-size: small;
   position: relative;
   left: 200px;
   bottom: 130px;
+  font-size: small;
 
 }
 
