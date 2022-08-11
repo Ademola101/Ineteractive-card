@@ -61,7 +61,7 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
       </label>
       <input id='number' placeholder='e.g. 123456789012' className='numberinput' style={{ ...borderStyle,
         border: errors.number && 'solid red 2px' }}
-      name='number'   type= 'number'  {...register('number', { required: 'Cant\'t be blank',
+      name='number'   type= 'number'  {...register('number', { required: 'Cant\t be blank',
         minLength: {
           value: 16,
           message: 'Card number should be 16 digits'
@@ -72,10 +72,15 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
           message: 'Card number should not be more than 16 digits'
 
         },
+        pattern : {
+          value: /^[0-9]{16}$/,
+          message: 'Card number should be 16 digits'
+        },
         onChange : cardNumberOnChange } )}/>
       {errors.number &&  errors.number.type === 'required' && <div className='error'>{errors.number.message}</div>}
       {errors.number &&  errors.number.type === 'minLength' && <div className='error'>{errors.number.message}</div>}
       {errors.number &&  errors.number.type === 'maxLength' && <div className='error'>{errors.number.message}</div>}
+      {errors.number &&  errors.number.type === 'pattern' && <div className='error'>{errors.number.message}</div>}
       </div>
 
       <div>
@@ -109,7 +114,7 @@ const Form = ({ handleSubmit, onSubmit, register,errors ,cardNameOnChange,
             bottom: !errors.month && errors.year ? 0 : 60
           }}>  can&apos;t be blank</div>}
           {errors.cvc && <div className='error-cvv' style={{
-            bottom: (!errors.month || !errors.year) && errors.cvv  ? 120 : 60
+            bottom: (!errors.month || !errors.year) && errors.cvv  ? 0 : 60
           }} > can&apos;t be blank </div>}
         </div>
 

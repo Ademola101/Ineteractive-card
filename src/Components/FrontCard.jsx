@@ -17,7 +17,7 @@ const FrontCard = ({ Number, Name, month, year }) => {
         <span  className='four'> {Number.substring(8,12)}</span><span  className='four'> {Number.substring(12,16)}</span></div>
       <div className='flex'>
         <small className='name'>
-          {Name }
+          {Name.substring(0,20) }
         </small>
 
         <small className='month'>
